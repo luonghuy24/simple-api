@@ -1,0 +1,184 @@
+Getting a list of todos
+-----------------------
+
+Parameters:
+  * page - Current page of orders
+
+Request:
+  GET /todos?page=1
+  Cookie: 
+  Host: example.org
+
+  page=1
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 1322
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"aa96c6382529115ae5a6fcea6a04cb80"
+  X-Request-Id: 461bd8ab-c68e-4c2f-b8b3-f2877221d19b
+  X-Runtime: 0.010087
+
+  [
+    {
+      "id": 1,
+      "title": "eaque",
+      "created_by": "2198669415",
+      "created_at": "2017-12-03T07:23:00.241Z",
+      "updated_at": "2017-12-03T07:23:00.241Z"
+    },
+    {
+      "id": 2,
+      "title": "neque",
+      "created_by": "1326982147",
+      "created_at": "2017-12-03T07:23:00.242Z",
+      "updated_at": "2017-12-03T07:23:00.242Z"
+    },
+    {
+      "id": 3,
+      "title": "voluptatum",
+      "created_by": "2359179010",
+      "created_at": "2017-12-03T07:23:00.243Z",
+      "updated_at": "2017-12-03T07:23:00.243Z"
+    },
+    {
+      "id": 4,
+      "title": "ab",
+      "created_by": "9014860873",
+      "created_at": "2017-12-03T07:23:00.244Z",
+      "updated_at": "2017-12-03T07:23:00.244Z"
+    },
+    {
+      "id": 5,
+      "title": "inventore",
+      "created_by": "1489065318",
+      "created_at": "2017-12-03T07:23:00.245Z",
+      "updated_at": "2017-12-03T07:23:00.245Z"
+    },
+    {
+      "id": 6,
+      "title": "eaque",
+      "created_by": "2738448844",
+      "created_at": "2017-12-03T07:23:00.246Z",
+      "updated_at": "2017-12-03T07:23:00.246Z"
+    },
+    {
+      "id": 7,
+      "title": "debitis",
+      "created_by": "5918334485",
+      "created_at": "2017-12-03T07:23:00.247Z",
+      "updated_at": "2017-12-03T07:23:00.247Z"
+    },
+    {
+      "id": 8,
+      "title": "ullam",
+      "created_by": "4127952996",
+      "created_at": "2017-12-03T07:23:00.248Z",
+      "updated_at": "2017-12-03T07:23:00.248Z"
+    },
+    {
+      "id": 9,
+      "title": "molestias",
+      "created_by": "1061516667",
+      "created_at": "2017-12-03T07:23:00.249Z",
+      "updated_at": "2017-12-03T07:23:00.249Z"
+    },
+    {
+      "id": 10,
+      "title": "sed",
+      "created_by": "7666485973",
+      "created_at": "2017-12-03T07:23:00.251Z",
+      "updated_at": "2017-12-03T07:23:00.251Z"
+    }
+  ]
+
+
+Getting a specific todo
+-----------------------
+
+Request:
+  GET /todos/1
+  Cookie: 
+  Host: example.org
+
+Response:
+  Status: 200 OK
+  Cache-Control: max-age=0, private, must-revalidate
+  Content-Length: 133
+  Content-Type: application/json; charset=utf-8
+  ETag: W/"0fc17eaf1cdacbee2a2674f1906112c6"
+  X-Request-Id: 618a4683-3277-45ec-8ee1-fa03ac0edc25
+  X-Runtime: 0.003593
+
+  {
+    "id": 1,
+    "title": "deleniti",
+    "created_by": "4912663040",
+    "created_at": "2017-12-03T07:23:00.274Z",
+    "updated_at": "2017-12-03T07:23:00.274Z"
+  }
+
+
+Deleting a todo
+---------------
+
+Request:
+  DELETE /todos/1
+  Cookie: 
+  Host: example.org
+
+Response:
+  Status: 204 No Content
+  Cache-Control: no-cache
+  X-Request-Id: 1d1b3207-edbf-4c63-bc23-73a1c8765578
+  X-Runtime: 0.014057
+
+
+Updating a todo
+---------------
+
+Parameters:
+  * title - Title of a todo
+
+Request:
+  PUT /todos/1
+  Content-Type: application/x-www-form-urlencoded
+  Cookie: 
+  Host: example.org
+
+  {"todo":{"title":"Updated title"}}
+
+Response:
+  Status: 204 No Content
+  Cache-Control: no-cache
+  X-Request-Id: 4cc435ab-0b7f-41b7-b97d-2a1e815b4e18
+  X-Runtime: 0.006186
+
+
+Creating a new todo
+-------------------
+
+Parameters:
+  * title - Title of todo
+  * created_by - Created_by
+
+Request:
+  POST /todos
+  Content-Type: application/x-www-form-urlencoded
+  Cookie: 
+  Host: example.org
+
+  {"todo":{"title":"new todo","created_by":1}}
+
+Response:
+  Status: 422 Unprocessable Entity
+  Cache-Control: no-cache
+  Content-Length: 80
+  Content-Type: application/json; charset=utf-8
+  X-Request-Id: d6f3c67a-70e9-4e8a-ac0d-1b8bc012f5a2
+  X-Runtime: 0.004394
+
+  {
+    "message": "Validation failed: Title can't be blank, Created by can't be blank"
+  }

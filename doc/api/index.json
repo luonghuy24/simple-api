@@ -5,11 +5,39 @@
       "explanation": null,
       "examples": [
         {
-          "description": "Listing todos",
-          "link": "todos/listing_todos.json",
+          "description": "Creating a new todo",
+          "link": "todos/creating_a_new_todo.json",
+          "groups": "all",
+          "route": "/todos",
+          "method": "post"
+        },
+        {
+          "description": "Deleting a todo",
+          "link": "todos/deleting_a_todo.json",
+          "groups": "all",
+          "route": "/todos/:id",
+          "method": "delete"
+        },
+        {
+          "description": "Getting a list of todos",
+          "link": "todos/getting_a_list_of_todos.json",
           "groups": "all",
           "route": "/todos",
           "method": "get"
+        },
+        {
+          "description": "Getting a specific todo",
+          "link": "todos/getting_a_specific_todo.json",
+          "groups": "all",
+          "route": "/todos/:id",
+          "method": "get"
+        },
+        {
+          "description": "Updating a todo",
+          "link": "todos/updating_a_todo.json",
+          "groups": "all",
+          "route": "/todos/:id",
+          "method": "put"
         }
       ]
     }

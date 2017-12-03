@@ -2,8 +2,8 @@
   "resource": "Todos",
   "resource_explanation": null,
   "http_method": "GET",
-  "route": "/todos",
-  "description": "Listing todos",
+  "route": "/todos/:id",
+  "description": "Getting a specific todo",
   "explanation": null,
   "parameters": [
 
@@ -14,7 +14,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/todos",
+      "request_path": "/todos/1",
       "request_body": null,
       "request_headers": {
         "Host": "example.org",
@@ -25,17 +25,17 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n\n]",
+      "response_body": "{\n  \"id\": 1,\n  \"title\": \"deleniti\",\n  \"created_by\": \"4912663040\",\n  \"created_at\": \"2017-12-03T07:23:00.274Z\",\n  \"updated_at\": \"2017-12-03T07:23:00.274Z\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"4f53cda18c2baa0c0354bb5f9a3ecbe5\"",
+        "ETag": "W/\"0fc17eaf1cdacbee2a2674f1906112c6\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "935e25c6-4c75-4b04-a55f-e9ac1f74f4b4",
-        "X-Runtime": "0.018247",
-        "Content-Length": "2"
+        "X-Request-Id": "618a4683-3277-45ec-8ee1-fa03ac0edc25",
+        "X-Runtime": "0.003593",
+        "Content-Length": "133"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": null
+      "curl": "curl -g \"http://localhost:3000/todos/1\" -X GET \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
     }
   ]
 }

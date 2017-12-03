@@ -1,0 +1,43 @@
+{
+  "resource": "Todos",
+  "resource_explanation": null,
+  "http_method": "PUT",
+  "route": "/todos/:id",
+  "description": "Updating a todo",
+  "explanation": null,
+  "parameters": [
+    {
+      "scope": "todo",
+      "name": "title",
+      "description": "Title of a todo"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "/todos/1",
+      "request_body": "{\"todo\":{\"title\":\"Updated title\"}}",
+      "request_headers": {
+        "Host": "example.org",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/x-www-form-urlencoded",
+      "response_status": 204,
+      "response_status_text": "No Content",
+      "response_body": null,
+      "response_headers": {
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "4cc435ab-0b7f-41b7-b97d-2a1e815b4e18",
+        "X-Runtime": "0.006186"
+      },
+      "response_content_type": null,
+      "curl": "curl \"http://localhost:3000/todos/1\" -d '{\"todo\":{\"title\":\"Updated title\"}}' -X PUT \\\n\t-H \"Host: example.org\" \\\n\t-H \"Content-Type: application/x-www-form-urlencoded\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}
