@@ -1,0 +1,17 @@
+{
+  "resources": [
+    {
+      "name": "Todos",
+      "explanation": null,
+      "examples": [
+        {
+          "description": "Listing todos",
+          "link": "todos/listing_todos.json",
+          "groups": "all",
+          "route": "/todos",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}
