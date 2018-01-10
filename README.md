@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a group project for COMP306 (002) class
 
-Things you may want to cover:
+Team members:
 
-* Ruby version
+- Nguyen Luong Huy 300913455
+- Tim Hitchcock 300801451
 
-* System dependencies
+URL: http://198.199.65.105
 
-* Configuration
+eg: http://198.199.65.105/users
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
